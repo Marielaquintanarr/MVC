@@ -1,15 +1,19 @@
 # app.py
 from flask import Flask, request, render_template
 from controllers.citaController import insertarCita
-
+from controllers.doctorController import verDoctor
 app = Flask(__name__)
 
-# Ruta para mostrar el formulario
+
 @app.route('/formulario', methods=['GET'])
 def formulario():
-    return render_template('formularioCita.html')  # Usa la ruta relativa
+    return render_template('formularioCita.html')  
 
-# Ruta para procesar el formulario cuando se envía
+@app.route('/doctores', methods=['GET'])
+def pagina_doctores():
+    return render_template('doctores_info.html')
+
+# ruta para procesar el formulario cuando se envía
 @app.route('/citas', methods=['POST'])
 def agregar_cita():
     if request.method == 'POST':

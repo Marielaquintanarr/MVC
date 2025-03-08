@@ -1,14 +1,6 @@
 from flask import request, jsonify
 from DAO.hacerCita import CitaDAO
 
-# def insertarCita():
-#     data = request.json
-#     if CitaDAO.insertar(data['nombre'], data['fecha'], data['hora'], data['motivo'], data['estado']):
-#         return jsonify({"mensaje": "Cita creada correctamente"}), 201
-#     else:
-#         return jsonify({"mensaje": "Error al crear cita"}), 400
-
-# controllers/citaController.py
 from DAO.hacerCita import CitaDAO
 from flask import request
 
