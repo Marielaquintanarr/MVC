@@ -35,6 +35,11 @@ body {
     width: 140px;
     height: 40px;
     border-radius: 20px;
+    cursor: pointer;
+}
+
+#agendar:hover{
+    background-color: #0052b0;
 }
 
 #subtitle{
@@ -77,6 +82,11 @@ body {
     width: 120px;
     height: 40px;
     border-radius: 20px;
+    cursor: pointer;
+}
+
+#conocenos:hover{
+    background-color: #0052b0;
 }
 
 #main-container{
@@ -86,4 +96,29 @@ body {
 #logo{
     width: 450px;
     height: 450px;
+    position: relative;
+    top: 15px;
+    right: 10px;
+}
+
+#botones{
+    display: flex;
+    gap: -30px;
+}
+
+#enfermeros{
+    margin-left: 50px;
+    background-color: #80cc2b;
+    color: white;
+    border-color: transparent;
+    width: 230px;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    position: relative;
+    right: 25px;
+}
+
+#enfermeros:hover{
+    background-color: #509600;
 }

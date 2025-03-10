@@ -4,25 +4,25 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Doctores</title>
+        <title>Enfermeros</title>
         <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     </head>
     <body>
         <a href="http://127.0.0.1:5000/">
             <button id="regresar-b">Regresar</button>
         </a>        
-        <h1 id="main-title">Doctores</h1>
+        <h1 id="main-title">Enfermeros</h1>
         <div class="main-container">
-            {% for doctor in doctores %}
+            {% for enfermero in enfermeros %}
             <div class="container">
                 <div id="ind-container">
-                    <img id="image" src= "static/{{ doctor.imagen }}">
+                    <img id="image" src= "static/{{ enfermero.imagen }}">
                     <div>
-                        <p id="nombre"> {{ doctor.nombre }}</p>
-                        <div id="highlight">
-                            <p id="rol"> {{ doctor.rol }}</p>
+                        <p id="nombre"> {{ enfermero.nombre }}</p>
+                        <div id="highlight2">
+                            <p id="rol"> {{ enfermero.rol }}</p>
                         </div>
-                        <p id="horario"> {{ doctor.horario }}</p>
+                        <p id="doctor">Asiste a: Dr. {{ enfermero.doctor.nombre }}</p>
                     </div>
                 </div>
             </div>
