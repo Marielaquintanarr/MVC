@@ -38,7 +38,7 @@ def agregar_cita():
         respuesta = insertarCita(nombre, fecha, hora, motivo, "Pendiente")
         
         if respuesta:
-            return f'Se ha creado tu cita {nombre} te esperamos el {fecha} a las {hora}'
+            return render_template('homepage.html')
         else:
             return 'Error al crear cita'
 
