@@ -8,40 +8,26 @@
         <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     </head>
     <body>
+        <a href="http://127.0.0.1:5000/">
+            <button>Regresar</button>
+        </a>        
         <h1 id="main-title">Doctores</h1>
         <div class="main-container">
+            {% for doctor in doctores %}
             <div class="container">
                 <div id="ind-container">
-                    <p id="nombre">Nombre: </p>
-                    <div id="highlight">
-                        <p id="rol">Puesto: </p>
+                    <img id="image" src= "static/{{ doctor.imagen }}">
+                    <div>
+                        <p id="nombre"> {{ doctor.nombre }}</p>
+                        <div id="highlight">
+                            <p id="rol"> {{ doctor.rol }}</p>
+                        </div>
+                        <p id="horario"> {{ doctor.horario }}</p>
                     </div>
-                    <p id="horario">Horario: </p>
-                </div>
-                <br>
-                <div id="ind-container">
-                    <p id="nombre">Nombre: </p>
-                    <div id="highlight">
-                        <p id="rol">Puesto: </p>
-                    </div>
-                    <p id="horario">Horario: </p>
-                </div>
-                <br>
-                <div id="ind-container">
-                    <p id="nombre">Nombre: </p>
-                    <div id="highlight">
-                        <p id="rol">Puesto: </p>
-                    </div>
-                    <p id="horario">Horario: </p>
                 </div>
             </div>
-            <div id="info-doc">
-                <img id="image-d" src="static/logo3.png">
-                <p id="nombre-d">Nombre: </p>
-                <p id="puesto-d">Puesto: </p>
-                <p id="horario-d">Horario de disponibilidad </p>
-                <p id="horario-d2">Horario:</p>
-            </div>
+            <br>
+            {% endfor %}
         </div>
-    </body>
+    </body>        
 </html>

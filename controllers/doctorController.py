@@ -1,9 +1,9 @@
-from flask import request, jsonify
+from flask import jsonify
 from DAO.verDoctor import DoctorDAO
-from flask import request
 
 def verDoctor():
-    if DoctorDAO.select():
-        return True
+    doctores = DoctorDAO.ver()
+    if doctores:
+        return jsonify(doctores)
     else:
-        return False
+        return jsonify({"error": "No se encontraron doctores"}), 404

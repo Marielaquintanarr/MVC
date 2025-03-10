@@ -1,0 +1,89 @@
+.container{
+    background-color: #ebebeb;
+    width: 1200px;
+    height: 500px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+
+body {
+    color: black;
+    font-family: Poppins, sans-serif;
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    height: 100vh;            
+    margin: 0;                
+}
+
+
+#title{
+    position: relative;
+    top: 40px;
+    font-size: 50px;
+    font-weight:900;
+    margin-left: 50px;
+}
+
+#agendar{
+    margin-left: 50px;
+    background-color: #0577f9;
+    color: white;
+    border-color: transparent;
+    width: 140px;
+    height: 40px;
+    border-radius: 20px;
+}
+
+#subtitle{
+    position: relative;
+    top: 10px;
+    font-size: 40px;
+    font-weight: 100;
+    margin-left: 50px;
+}
+
+#p{
+    font-size: 20px;
+    font-weight: 100;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.doctores-info{
+    position: relative;
+    top: 0px;
+    background-color: white;
+    height: 50px;
+    top: -120px;
+    width: 600px;
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    gap: 100px;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    margin-left: 50px;
+}
+
+#conocenos{
+    background-color: #0577f9;
+    color: white;
+    border-color: transparent;
+    width: 120px;
+    height: 40px;
+    border-radius: 20px;
+}
+
+#main-container{
+    display: flex;
+}
+
+#logo{
+    width: 450px;
+    height: 450px;
+}

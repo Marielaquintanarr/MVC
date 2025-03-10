@@ -2,6 +2,7 @@
 from flask import Flask, request, render_template
 from controllers.citaController import insertarCita
 from controllers.doctorController import verDoctor
+from DAO.verDoctor import DoctorDAO
 app = Flask(__name__)
 
 
@@ -11,9 +12,15 @@ def formulario():
 
 @app.route('/doctores', methods=['GET'])
 def pagina_doctores():
-    return render_template('doctores_info.html')
+    doctores = DoctorDAO.ver() 
+    return render_template('doctores_info.html', doctores=doctores)
 
-# ruta para procesar el formulario cuando se envía
+@app.route('/', methods=['GET'])
+def homepage():
+    return render_template('homepage.html')
+
+
+
 @app.route('/citas', methods=['POST'])
 def agregar_cita():
     if request.method == 'POST':
@@ -22,7 +29,6 @@ def agregar_cita():
         hora = request.form['hora']
         motivo = request.form['motivo']
         
-        # Aquí se llama al controlador que se encarga de insertar los datos
         respuesta = insertarCita(nombre, fecha, hora, motivo, "Pendiente")
         
         if respuesta:
