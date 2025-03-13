@@ -11,7 +11,7 @@ class EnfermeroDAO:
             )
 
             enfermeros = response.data  
-            print("Datos obtenidos:", enfermeros)  # Para verificar la respuesta
+            print("Datos obtenidos:", enfermeros) 
             return enfermeros
         except Exception as e:
             print(f"Error al obtener enfermeros: {e}")

@@ -3,6 +3,7 @@
 
 - Mariela Quintanar a01642675
 - Pablo Heredia A01637103
+- Hakon Winsness
 
 
 ## Estructura de la aplicacion: 

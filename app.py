@@ -2,8 +2,7 @@
 from flask import Flask, request, render_template
 from controllers.citaController import insertarCita, verCitas
 from controllers.doctorController import verDoctor
-from DAO.verDoctor import DoctorDAO
-from DAO.verEnfermero import EnfermeroDAO
+from controllers.enfermeroController import verEnfermero
 
 app = Flask(__name__)
 
@@ -14,7 +13,7 @@ def formulario():
 
 @app.route('/doctores', methods=['GET'])
 def pagina_doctores():
-    doctores = DoctorDAO.ver() #Cambiar esto al controlador por modelo 
+    doctores = verDoctor()
     return render_template('doctores_info.html', doctores=doctores)
 
 @app.route('/', methods=['GET'])
@@ -24,7 +23,8 @@ def homepage():
 
 @app.route('/enfermeros')
 def mostrar_enfermeros():
-    enfermeros = EnfermeroDAO.ver()  #Cambiar a controlador por modelo
+    enfermeros = verEnfermero()
+    print(enfermeros)
     return render_template('enfermeros-info.html', enfermeros=enfermeros)
 
 @app.route('/citas', methods=['POST'])

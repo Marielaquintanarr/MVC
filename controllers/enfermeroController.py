@@ -1,9 +1,9 @@
-from flask import jsonify
-from DAO.verEnfermero import EnfermeroDAO
+from flask import request
+from DAO.enfermeroDAO import EnfermeroDAO
 
-def verEnfermeri():
+def verEnfermero():
     enfermeros = EnfermeroDAO.ver()
     if enfermeros:
-        return jsonify(enfermeros)
+        return enfermeros
     else:
-        return jsonify({"error": "No se encontraron enfermeros"}), 404
+        return [{"error":"No se encontraron enfermeros"}]

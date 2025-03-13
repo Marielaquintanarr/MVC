@@ -4,7 +4,6 @@ from modelo.Cita import Cita
 class CitaDAO:
     @staticmethod
     def insertar(cita: Cita):
-
         try:
             response = db.table("cita").insert(cita.to_dict()).execute()
             print(response)

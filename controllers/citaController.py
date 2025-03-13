@@ -1,7 +1,4 @@
-from flask import request, jsonify
-from DAO.hacerCita import CitaDAO
-
-from DAO.hacerCita import CitaDAO
+from DAO.citaDAO import CitaDAO
 from flask import request
 
 from modelo.Cita import Cita

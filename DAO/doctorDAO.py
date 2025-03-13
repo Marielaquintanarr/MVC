@@ -1,12 +1,12 @@
 from modelo.database import db
+from modelo.Medico import Medico
 
 class DoctorDAO:
     @staticmethod
     def ver():
         try:
             response = db.table("doctor").select("*").execute()
-            doctores = response.data 
-            return doctores
+            return response.data
         except Exception as e:
             print(f"Error al obtener doctores: {e}")
-            return []
+            return False
